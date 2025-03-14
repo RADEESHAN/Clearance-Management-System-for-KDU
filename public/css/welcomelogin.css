@@ -1,0 +1,111 @@
+@import url("./basic_styles.css");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/images/Background_Abstract.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center-container {
+  display: flex !important;
+  justify-content: center !important; /* Center horizontally */
+  align-items: center !important; /* Center vertically */
+  margin-top: 10px !important;
+  font-family: var(--text);
+  min-height: 70vh !important;
+  min-width: 1000px !important;
+  align-content: center !important;
+
+}
+
+.form-wrapper {
+  min-width: 420px !important;
+  padding: 2rem;
+  background-color: #ffffff; /* Bright white background */
+  border-radius: 20px; /* Softer rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow for a lifted effect */
+  transition: transform 0.3s ease-in-out;
+  border-color: #6699ff;
+}
+
+.form-title {
+  font-family: "Roboto";
+  font-size: 2rem; /* Larger font size for emphasis */
+  color: var(--blackText);
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.form-sub-title {
+  margin-top: 10px;
+  color: var(--grayText);
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem; /* Slightly more spacing */
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--textBoxBG);
+  border: 1px solid #6699ff; /* Soft border */
+  border-radius: 13px; /* Rounded corners */
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 2px solid #6699ff;
+  box-shadow: 0 0 5px rgba(0, 71, 171, 0.5);
+}
+
+.submit-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 20px;
+  font-size: 1.2rem; /* Slightly larger button text */
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--mainColor); /* Deep blue button background */
+  border: none;
+  border-radius: 13px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #4d79ff; /* Darken button on hover */
+  transform: translateY(-3px); /* Lift the button slightly */
+}
+
+.side-image {
+  margin-top: 0;
+  margin-left: 150px;
+  margin-right: 80px;
+  max-width: 550px; /* Ensure image scales properly */
+  height: auto; /* Maintain aspect ratio */
+}
+.forgot-password {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.forgot-password a {
+  font-size: 0.9rem;
+  color: var(--mainColor); /* You can use your primary theme color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.forgot-password a:hover {
+  color: #4d79ff; /* Slightly darker color on hover */
+}

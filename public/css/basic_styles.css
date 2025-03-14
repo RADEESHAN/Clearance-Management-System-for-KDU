@@ -1,0 +1,11 @@
+:root{
+    --text: "Roboto", sans-serif;
+    --title-text: "Roboto Slab", serif;
+
+    --mainColor: #6699FF;
+    --textBoxBG: rgba(206, 223, 255, 0.5); 
+    --blackText: #000000;
+    --whiteText: #ffffff;
+    --grayText: #656464;
+    
+}

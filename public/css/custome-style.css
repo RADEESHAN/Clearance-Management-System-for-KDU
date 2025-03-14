@@ -1,0 +1,434 @@
+
+.container {
+  /*padding: 1rem;  Decrease padding for reduced height */
+  margin-top:70px; /* Create enough space to push the content below the sticky header */
+  max-width: 90%; /* Decrease container size */
+  margin: 1 auto;
+  max-height: calc(100vh - 150px); /* Ensure container height fits the viewport */
+  height: auto; /* Allow container height to adjust dynamically */
+}
+
+/* Sticky Header */
+.sticky-header {
+  position: fixed; /* Keep the header fixed in place */
+  top: 110px; /* Adjust based on the actual header position */
+  height: 70px;
+  left: 253px;
+  width: 90%; /* Full width of the container */
+  background-color: #f8f9fa; /* Matches the header background */
+  z-index: 1000; /* Ensures it's above the content */
+  padding: 1rem;
+  border-bottom: 1px solid #ddd; /* Adds a bottom border for separation */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for a raised effect */
+  text-align: left; /* Align content to the left for consistency */
+  display: flex;
+  justify-content: space-evenly; /* Spread the elements evenly */
+  align-items: center;
+}
+
+
+/* Department Title */
+.department-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Total Requests */
+.total-requests {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #3498db;
+  margin: 0;
+}
+
+/* Filter Container */
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Spacing between items */
+}
+
+/* Filter Checkboxes */
+.filter-container label {
+  font-size: 0.9rem;
+  color: #34495e;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Search Input */
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  width: 200px;
+}
+/* Submit Button */
+.submit-button {
+  padding: 0.5rem 1rem;
+  background-color: #ababab; /* Match Total Requests color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #7a7a7b; /* Slightly darker shade on hover */
+}
+
+
+/* List Layout */
+.scrollable-panel {
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ddd; /* Optional: Add a border for clarity */
+    border-radius: 10px; /* Optional: Rounded corners */
+    padding: 1rem; /* Add padding for better spacing */
+    background-color: #f9f9f9; /* Optional: Light background color */
+}
+
+.application-list {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove default list styling */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Add spacing between items */
+}
+
+.application-item {
+    /* Existing styling */
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.application-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.application-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.application-header h5 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.status-badge {
+  font-size: 0.9rem;
+  font-weight: 600;
+  
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.status-approved {
+  color: #27ae60;
+}
+
+.status-rejected {
+  color: #c0392b;
+}
+
+/* Application Details */
+.application-details p {
+  margin: 0.5rem 0;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+.application-details strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Form Container */
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #495057;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Checkboxes */
+.form-check-label {
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: #34495e;
+}
+
+.form-check-input {
+  margin-right: 0.5rem;
+}
+
+/* Form container with a border and padding */
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Space inside the border */
+  background-color: #f9f9f9; /* Light background color for contrast */
+}
+/* Custom checkbox style */
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #007bff; /* Primary color when checked */
+  border-color: #007bff; /* Border color when checked */
+}
+
+.custom-checkbox .custom-control-label::before {
+  background-color: #fff; /* Background color when unchecked */
+  border: 1px solid #ddd; /* Light grey border */
+}
+
+.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Focus state shadow */
+}
+
+/* Aligns the checkboxes to the left */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd; /* Border around the checkbox group */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px; /* Space inside the border */
+  background-color: #fff; /* White background color for contrast */
+}
+
+/* Ensures the checkboxes have some space between them */
+.checkbox-group .form-check {
+  margin-right: 1rem;
+}
+
+/* Styling for form-check label */
+.custom-control-label {
+  margin-bottom: 0; /* Remove bottom margin for labels */
+  font-weight: 500; /* Slightly bolder text */
+}
+
+/* Buttons */
+.btn {
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem; /* Adjusted font size for consistency */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #3498db; /* Blue color */
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.btn-secondary {
+  background-color: #e0e0e0; /* Light gray for the reset button */
+  color: #34495e;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #b0b0b0; /* Darker gray on hover */
+}
+
+.application-details {
+  display: flex;
+  flex-wrap: wrap; /* Wraps items to the next line if space is insufficient */
+  /* gap: 0.1rem; Adds spacing between items */
+  align-items: center; /* Vertically centers the content */
+}
+
+.detail-item {
+  flex: 1 1 20%; /* Each item takes up 20% of the row width by default */
+  font-size: 0.9rem;
+  color: #34495e;
+  min-width: 150px; /* Minimum width to avoid overly narrow items */
+}
+
+.detail-item strong {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .btn-primary {
+    margin-right: 0;
+  }
+
+  .btn-secondary {
+    margin-left: 0;
+  }
+}
+
+/* Buttons */
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: space-between; /* Space between PDF and Approval/Decline Buttons */
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.pdf-view-buttons {
+  display: flex;
+  gap: 0.5rem; /* Space between PDF buttons */
+}
+.pdf-view-buttons .btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  background-color: #a4a4a4;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.pdf-view-buttons .btn:hover {
+  background-color: #6c6c6c;
+}
+.button-group form,
+.button-group button,
+.button-group a {
+  margin: 0; /* Ensure no extra margin is added */
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.approval-buttons {
+  display: flex;
+  gap: 0.5rem; /* Space between Approve and Decline buttons */
+}
+.btn-approve {
+  background-color: #588ee4;
+  color: white;
+}
+
+.btn-approve:hover {
+  background-color: #4776c2;
+}
+
+.btn-decline {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-decline:hover {
+  background-color: #c0392b;
+}
+
+.btn-show-more {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-show-more:hover {
+  background-color: #2980b9;
+}
+
+/* Ensures the form elements are aligned correctly */
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Aligns the checkboxes to the left */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Ensures the checkboxes have some space between them */
+.checkbox-group .form-check {
+  margin-right: 1rem;
+}
+
+/* Center the search bar */
+.search-bar {
+  flex: 1;
+  max-width: 400px; /* Adjust the max-width as needed */
+}
+
+/* Aligns the buttons to the right */
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+/* Adds spacing between buttons */
+.button-group .btn {
+  margin-left: 0.5rem;
+}
+
+.warning-message {
+  font-size: 0.9em;
+  color: #dc3545;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .button-group {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .button-group .btn {
+    width: 100%;
+  }
+}
